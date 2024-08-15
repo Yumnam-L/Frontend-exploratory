@@ -1,38 +1,131 @@
-.App {
+:root {
+  --background-color: #2c2929; 
+  --text-color: #000000;
+  --link-color: #0645ad;
+  --link-hover-color: #b72729;
+  --header-bg-color: #f8f9fa;
+  --section-bg-color: #ffffff;
+  --border-color: #a2a9b1;
+  --outside-bg-color: #6052ae;
+}
+.dark {
+  --background-color: #1e1e1e;
+  --text-color: #c0c0c0;
+  --link-color: #87ceeb;
+  --link-hover-color: #00bfff;
+  --header-bg-color: #333333;
+  --section-bg-color: #2e2e2e;
+  --border-color: #4f4f4f;
+  --outside-bg-color: #0b092e;
+}
+
+body {
+  background-color: var(--outside-bg-color);
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+.header {
+  background-color: var(--header-bg-color);
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gallery, .events {
+  background-color: var(--section-bg-color);
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.gallery h2, .events h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+}
+
+.description {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--link-color);
   color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: var(--link-hover-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gallery {
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 800px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+}
+
+.description {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-color);
 }
